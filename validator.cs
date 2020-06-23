@@ -3,9 +3,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 
 public class DomainNameValidator {
-  public bool validate(String Domain) {
-    String[] parts = Domain.Split('.');
-  
+  public bool validate(String Domain) {  
     if (!isLengthValid(Domain)) {
       return false;
     }
@@ -14,7 +12,7 @@ public class DomainNameValidator {
       return false;
     }
     
-    return areDomainPartsValid(parts);
+    return areDomainPartsValid(parts.Split('.'));
   }
   
   private bool isLengthValid(string Domain)
