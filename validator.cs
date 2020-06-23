@@ -12,7 +12,7 @@ public class DomainNameValidator {
       return false;
     }
     
-    return areDomainPartsValid(parts.Split('.'));
+    return areDomainPartsValid(Domain.Split('.'));
   }
   
   private bool isLengthValid(string Domain)
